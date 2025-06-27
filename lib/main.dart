@@ -109,6 +109,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const SizedBox(height: 20), // Add spacing
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Button pressed!')),
+                );
+              },
+              child: const Text('Show SnackBar'),
+            ),
           ],
         ),
       ),
